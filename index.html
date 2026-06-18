@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Personal one-page card site." />
+    <title>Personal Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell" aria-live="polite">
+      <section class="hero" aria-labelledby="person-name">
+        <div class="lang-switch" aria-label="Language switch">
+          <button class="lang-button is-active" type="button" data-lang-switch="ru">RU</button>
+          <button class="lang-button" type="button" data-lang-switch="en">EN</button>
+        </div>
+
+        <div class="pixel-mark" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <p class="eyebrow" data-i18n="eyebrow">личная визитка</p>
+        <h1 id="person-name" data-i18n="name">Никита</h1>
+        <p class="role" data-i18n="role">Твоя должность / роль</p>
+
+        <div class="about-block">
+          <p data-i18n="about">
+            Короткий блок о себе: кто ты, чем занимаешься, что создаешь и где с тобой
+            связаться. Здесь можно оставить 2-3 сильные фразы без лишнего шума.
+          </p>
+        </div>
+
+        <nav class="links-grid" aria-label="Social links">
+          <a href="#" data-link-key="poems" data-i18n="linkPoems">TG паблик со стихами</a>
+          <a href="#" data-link-key="telegram" data-i18n="linkTelegram">TG личная страница</a>
+          <a href="#" data-link-key="vk" data-i18n="linkVk">VK</a>
+          <a href="#" data-link-key="max" data-i18n="linkMax">MAX</a>
+          <a href="#" data-link-key="instagram" data-i18n="linkInstagram">Instagram</a>
+          <a href="mailto:email@example.com" data-link-key="email" data-i18n="linkEmail">Почта</a>
+          <a href="tel:+70000000000" data-link-key="phone" data-i18n="linkPhone">Телефон</a>
+        </nav>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
