@@ -160,9 +160,8 @@ h1 {
   max-width: 100%;
   margin: 0;
   font-family: var(--font-pixel);
-  font-size: clamp(3.5rem, 11.4vw, 9.4rem);
+  font-size: clamp(3rem, 7vw, 5.8rem);
   line-height: 1.18;
-  overflow-wrap: anywhere;
   text-transform: uppercase;
   text-shadow:
     4px 4px 0 #000,
@@ -175,6 +174,7 @@ h1 {
   display: block;
   width: fit-content;
   max-width: 100%;
+  white-space: nowrap;
 }
 
 .last-name {
