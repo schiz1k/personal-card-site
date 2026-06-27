@@ -1,37 +1,67 @@
-# Personal Card Site
+# Vizitka
 
-Minimal one-page personal card site with:
+Приватный учебный проект для выпускной квалификационной работы в
+Тольяттинской академии управления, 2026 год.
 
-- RU/EN language switch
-- black, white, and gray minimalist visual system
-- pixel/Minecraft-like heading font via `Press Start 2P`
-- `Hannotate SC` / `Hannotate TC` fallbacks for systems where those fonts are installed
-- animated hero, pixel mark, links, and hover states
+Проект представляет собой одностраничный сайт-визитку. Страница сделана на
+чистых HTML, CSS и JavaScript без CMS, сборщика и серверной части.
 
-## Edit Personal Data
+## Состав проекта
 
-Open `script.js` and replace:
+- `index.html` - структура страницы и подключение ресурсов.
+- `styles.css` - визуальное оформление, адаптивность и анимации.
+- `script.js` - переключение языка и подстановка ссылок.
+- `docs/project-passport.md` - паспорт проекта для документации ВКР.
+- `docs/deployment.md` - инструкция по публикации и переносу.
 
-- `copy.ru.name`
-- `copy.en.name`
-- `copy.ru.role`
-- `copy.en.role`
-- `copy.ru.about`
-- `copy.en.about`
-- all values in `links`
+## Возможности
 
-Open `index.html` if you want to change the page title or meta description.
+- русская и английская версии текста;
+- переключатель языка RU/EN;
+- адаптивная верстка для мобильных и десктопных экранов;
+- минималистичный черно-белый визуальный стиль;
+- блок ссылок на Telegram, VK, MAX, Instagram, почту и телефон;
+- работа без базы данных и backend-сервера.
 
-## Local Preview
+## Локальный запуск
 
-Open `index.html` in a browser.
+Для проверки достаточно открыть файл `index.html` в браузере.
 
-## GitHub Pages
+Также можно запустить простой локальный сервер:
 
-1. Create a new GitHub repository.
-2. Upload or push the contents of this folder.
-3. Open repository settings.
-4. Go to `Pages`.
-5. Set source to the `main` branch and root folder.
-6. Save and wait for the published URL.
+```bash
+python3 -m http.server 8000
+```
 
+После запуска сайт будет доступен по адресу:
+
+```text
+http://localhost:8000
+```
+
+## Настройка данных
+
+Основные тексты и ссылки находятся в `script.js`.
+
+Для изменения данных нужно обновить:
+
+- `copy.ru` и `copy.en` - тексты русской и английской версии;
+- `links` - ссылки на социальные сети, почту и телефон;
+- `title` и `meta description` в `index.html` при необходимости.
+
+## Размещение
+
+Проект можно разместить на любом статическом хостинге:
+
+- GitHub Pages;
+- Netlify;
+- Vercel;
+- обычный веб-хостинг с доступом к файловому менеджеру или FTP.
+
+Подробная инструкция находится в `docs/deployment.md`.
+
+## Приватность репозитория
+
+Репозиторий должен быть создан как приватный, так как проект относится к
+учебной работе и не предназначен для публичного распространения без разрешения
+автора.
