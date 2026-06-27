@@ -1,42 +1,36 @@
 const copy = {
   ru: {
     eyebrow: "личная визитка",
-    name: "Никита",
-    role: "Твоя должность / роль",
+    name: "Никита Мочальников",
+    role: "Проектный менеджер",
     about:
-      "Короткий блок о себе: кто ты, чем занимаешься, что создаешь и где с тобой связаться. Здесь можно оставить 2-3 сильные фразы без лишнего шума.",
+      "Молодой специалист, которого ничего не останавливает. Нравится изучать новое и автоматизировать процессы.",
     linkPoems: "TG паблик со стихами",
     linkTelegram: "TG личная страница",
     linkVk: "VK",
-    linkMax: "MAX",
     linkInstagram: "Instagram",
     linkEmail: "Почта",
-    linkPhone: "Телефон",
   },
   en: {
     eyebrow: "personal card",
-    name: "Nikita",
-    role: "Your title / role",
+    name: "Nikita Mochalnikov",
+    role: "Project Manager",
     about:
-      "A short block about you: who you are, what you make, and where people can reach you. Keep it sharp, quiet, and direct.",
+      "A young specialist who does not stop at obstacles. I enjoy learning new things and automating processes.",
     linkPoems: "TG poetry channel",
     linkTelegram: "TG personal page",
     linkVk: "VK",
-    linkMax: "MAX",
     linkInstagram: "Instagram",
     linkEmail: "Email",
-    linkPhone: "Phone",
   },
 };
 
 const links = {
-  poems: "#",
-  telegram: "#",
-  vk: "#",
-  max: "#",
-  instagram: "#",
-  email: "mailto:email@example.com",
-  phone: "tel:+70000000000",
+  poems: "https://t.me/sch1z0ph",
+  telegram: "https://t.me/sch1zoph",
+  vk: "https://vk.com/schizoph",
+  instagram: "https://instagram.com/___n1k1ta____",
+  email: "mailto:mocalnikovnikita94@gmail.com",
 };
 
 const setLanguage = (lang) => {
@@ -60,5 +54,9 @@ document.querySelectorAll("[data-link-key]").forEach((anchor) => {
   const href = links[anchor.dataset.linkKey];
   if (href) {
     anchor.href = href;
+    if (href.startsWith("http")) {
+      anchor.target = "_blank";
+      anchor.rel = "noopener noreferrer";
+    }
   }
 });
