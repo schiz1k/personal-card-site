@@ -157,7 +157,7 @@ h1 {
   max-width: 100%;
   margin: 0;
   font-family: var(--font-pixel);
-  font-size: clamp(2.1rem, 8vw, 5.8rem);
+  font-size: clamp(1.75rem, 5.7vw, 4.7rem);
   line-height: 1.18;
   overflow-wrap: anywhere;
   text-transform: uppercase;
