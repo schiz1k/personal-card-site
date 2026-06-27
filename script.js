@@ -1,7 +1,8 @@
 const copy = {
   ru: {
     eyebrow: "личная визитка",
-    name: "Никита Мочальников",
+    firstName: "Никита",
+    lastName: "Мочальников",
     role: "Проектный менеджер",
     about:
       "Молодой специалист, которого ничего не останавливает. Нравится изучать новое и автоматизировать процессы.",
@@ -13,7 +14,8 @@ const copy = {
   },
   en: {
     eyebrow: "personal card",
-    name: "Nikita Mochalnikov",
+    firstName: "Nikita",
+    lastName: "Mochalnikov",
     role: "Project Manager",
     about:
       "A young specialist who does not stop at obstacles. I enjoy learning new things and automating processes.",
@@ -29,7 +31,7 @@ const links = {
   poems: "https://t.me/sch1z0ph",
   telegram: "https://t.me/sch1zoph",
   vk: "https://vk.com/schizoph",
-  instagram: "https://instagram.com/___n1k1ta____",
+  instagram: "https://www.instagram.com/____n1k1ta_____/",
   email: "mailto:mocalnikovnikita94@gmail.com",
 };
 
@@ -40,6 +42,9 @@ const setLanguage = (lang) => {
     const key = node.dataset.i18n;
     node.textContent = copy[lang][key];
   });
+
+  document.querySelector("[data-name-first]").textContent = copy[lang].firstName;
+  document.querySelector("[data-name-last]").textContent = copy[lang].lastName;
 
   document.querySelectorAll("[data-lang-switch]").forEach((button) => {
     button.classList.toggle("is-active", button.dataset.langSwitch === lang);
